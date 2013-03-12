@@ -1,32 +1,30 @@
-#ifndef _OF_BALL // if this class hasn't been defined, the program can define it
-#define _OF_BALL // by using this if statement you prevent the class to be called more
-                 // than once which would confuse the compiler
+#ifndef _OF_BALL
+#define _OF_BALL
+
 
 #include "ofMain.h"
 
 class ofBall {
 
-    public: // place public functions or variables declarations here
+    public:
 
-        // methods, equivalent to specific functions of your class objects
-        void update();  // update method, used to refresh your objects properties
-        void draw();    // draw method, this where you'll do the object's drawing
 
-        // variables
-        int ax;      // position
+        void update(int);
+        void draw();
+
+
+        int ax;
         int ay;
-        int speedY; // speed and direction
+        int speedY;
         int speedX;
         int dim;
         int maxWidth;
         int maxHeight;
-// size
+        ofBall(int,int,int,int);
+                  //
 
-        ofBall(int,int,int,int); // constructor - used to initialize an object, if no properties are passed
-                  //               the program sets them to the default value
+    private:
 
-    private: // place private functions or variables declarations here
-
-}; // dont't forget the semicolon!!
+};
 
 #endif

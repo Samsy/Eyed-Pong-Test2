@@ -1602,21 +1602,27 @@
 1362945592 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\opencvhaarfinderexample\src\testapp.cpp
 	"testApp.h"
 
-1362935218 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\main.cpp
+1363100884 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\main.cpp
 	"ofAppGlutWindow.h"
 	"testApp.h"
 
-1362945327 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\testapp.h
+1363102491 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\testapp.h
 	"ofMain.h"
 	"ofxCvHaarFinder.h"
 	"ofBall.h"
+	"MyThread.h"
 
-1362936211 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\ofball.h
+1363100531 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\ofball.h
 	"ofMain.h"
 
-1362936976 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\ofball.cpp
+1363100885 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\ofball.cpp
 	"ofBall.h"
 
-1362951943 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\testapp.cpp
+1363103547 source:c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\testapp.cpp
 	"testApp.h"
+
+1363103613 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\mythread.h
+	"ofMain.h"
+
+1363027422 c:\users\samuel\desktop\of_v0.7.4_win_cb_release\examples\addons\pong-eyed\src\ofthread.h
 

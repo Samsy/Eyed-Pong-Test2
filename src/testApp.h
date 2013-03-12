@@ -3,13 +3,14 @@
 #include "ofMain.h"
 #include "ofxCvHaarFinder.h"
 #include "ofBall.h"
+#include "MyThread.h"
 
 class testApp : public ofBaseApp{
 	public:
 		void setup();
 		void update();
 		void draw();
-
+		void exit();
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -19,30 +20,30 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-
-
 		ofImage img;
-		ofImage myImage;
+		ofImage detail;
 		ofxCvHaarFinder finder;
-//ofBall myball;
 		ofVideoGrabber 		vidGrabber;
-		unsigned char * 	videoInverted;
+
 		unsigned char * pixels;
+		unsigned char * fond;
+
 		ofTexture			videoTexture;
+		ofTexture			fondTexture;
 		bool EyeLeft;
 		bool EyeRight;
 		int 				camWidth;
 		int 				camHeight;
-		int def;
-		int c;
-		int begin, end;
 		int rectPongX;
-        double time_spent;
-		int a,r,g,b;
-		float fr;
+
+        MyThread thread;
 
     private :
         ofBall *myball;
 
 
+        //MyThread *thread;
+
 };
+
+

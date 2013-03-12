@@ -1,4 +1,4 @@
-#include "ofBall.h"
+#include "MyThread.h"
 
 ofBall::ofBall(int a, int b, int c, int d)
 {
@@ -6,9 +6,6 @@ ofBall::ofBall(int a, int b, int c, int d)
     ay = b;
     maxWidth= c;
     maxHeight = d;
-
-
-
     speedX = -5;           // and random speed and direction
     speedY = 5;
        dim = 10;
@@ -21,16 +18,14 @@ ay= ay+speedY;
 
 if(ax>maxWidth) {
         ax-=10;
-        speedX = -speedX;
-
+        speedX = -5;
        // cout << "ax " <<ax << endl;
         //cout << "maxWidth " <<maxWidth << endl;
         }
 
 if(ax<0) {
         ax+=10;
-        speedX = -speedX;
-        speedX++;
+        speedX = 5;
        // cout << "ax " <<ax << endl;
         //cout << "maxWidth " <<maxWidth << endl;
         }
