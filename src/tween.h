@@ -4,28 +4,27 @@
 
 
 #include "ofMain.h"
-
 #define tweenNumber 18
 
-class tween {
+class tween
+{
 
-    public:
+public:
 
 
-        void update(int,int);
-        void draw();
+    void update(int,int);
+    void draw();
+    int permutX;
+    int permutY;
+    int ax[tweenNumber];
+    int ay[tweenNumber];
+    int alpha;
+    int color;
+    float dim;
+    tween();
+    //
 
-        int permutX;
-        int permutY;
-        int ax[tweenNumber];
-        int ay[tweenNumber];
-        int alpha;
-        int color;
-        float dim;
-        tween();
-                  //
-
-    private:
+private:
 
 };
 

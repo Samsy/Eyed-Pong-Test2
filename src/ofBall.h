@@ -4,26 +4,26 @@
 
 #include "ofMain.h"
 
-class ofBall {
+class ofBall
+{
 
-    public:
+public:
 
 
-        void update(int);
-        void draw();
+    void update(int);
+    void draw();
+    int exchange;
+    int ax;
+    int ay;
+    int speedY;
+    int speedX;
+    int dim;
+    int maxWidth;
+    int maxHeight;
+    ofBall(int,int,int,int);
 
-        int exchange;
-        int ax;
-        int ay;
-        int speedY;
-        int speedX;
-        int dim;
-        int maxWidth;
-        int maxHeight;
-        ofBall(int,int,int,int);
-                  //
 
-    private:
+private:
 
 };
 
