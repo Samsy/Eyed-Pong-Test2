@@ -17,11 +17,12 @@ unsigned char * pixels2;
 bool flag;
 
 		MyThread (){
-    cam.setDeviceID(0);
+    cam.setDeviceID(1);
     cam.setVerbose(true);
 	cam.initGrabber(640,360);
    flag=false;
-		}
+
+   		}
 
 		void start(){
             startThread(true, false);

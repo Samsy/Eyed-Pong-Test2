@@ -12,7 +12,7 @@ class ofBall {
         void update(int);
         void draw();
 
-
+        int exchange;
         int ax;
         int ay;
         int speedY;

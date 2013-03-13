@@ -24,8 +24,9 @@ void testApp::setup()
     // chargement de la petite description de l'appli, dans une texture
     detail.loadImage("fond.jpg");
     fond = detail.getPixels();
-    fondTexture.loadData(fond, 300,360, GL_RGB);
 
+    fondTexture.loadData(fond, 300,360, GL_RGB);
+    verdana14.loadFont("verdana.ttf", 9, true, true);
 
     thread.start();
 
@@ -64,8 +65,8 @@ void testApp::draw()
     videoTexture.draw(0,0,camWidth,camHeight);
      fondTexture.draw(camWidth,0,300,360);
 
-
-
+   // verdana14.drawString(typeStr, 740, 300);
+MyTween.update(myball->ax,myball->ay);
     // les deux valeurs Eyeleft et EyeRight, permettent
     // de déterminer si l'oeuil qui a été détécté
     // est à gauche ou a droite de la barre centrale de jeu.
@@ -124,12 +125,13 @@ void testApp::draw()
 
     ofSetColor(255,0,0);
 
-    if((myball->ay > camHeight) || (myball->ay < 0) ) {
+    if((myball->ay > camHeight+10) || (myball->ay < 0) ) {
         myball = new ofBall(camWidth/2,camHeight/2,camWidth,camHeight);
     }
 
     // dessin de la boule
     myball->draw();
+    MyTween.draw();
     ofSetColor(255,255,255);
 
 }

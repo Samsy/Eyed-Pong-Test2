@@ -4,6 +4,7 @@
 #include "ofxCvHaarFinder.h"
 #include "ofBall.h"
 #include "MyThread.h"
+#include "tween.h"
 
 class testApp : public ofBaseApp{
 	public:
@@ -24,7 +25,7 @@ class testApp : public ofBaseApp{
 		ofImage detail;
 		ofxCvHaarFinder finder;
 		ofVideoGrabber 		vidGrabber;
-
+        tween MyTween;
 		unsigned char * pixels;
 		unsigned char * fond;
 
@@ -35,7 +36,8 @@ class testApp : public ofBaseApp{
 		int 				camWidth;
 		int 				camHeight;
 		int rectPongX;
-
+		ofTrueTypeFont	verdana14;
+        string typeStr;
         MyThread thread;
 
     private :
