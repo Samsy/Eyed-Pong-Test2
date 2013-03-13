@@ -17,7 +17,7 @@ unsigned char * pixels2;
 bool flag;
 
 		MyThread (){
-    cam.setDeviceID(1);
+    cam.setDeviceID(0);
     cam.setVerbose(true);
 	cam.initGrabber(640,360);
    flag=false;
