@@ -26,8 +26,11 @@ void testApp::setup()
 //--------------------------------------------------------------
 void testApp::update()
 {
+    // récupération de l'image webcam, et envoi de l'image à la détéction
     grabAndDetect();
+    // update de la position de la balle
     myball->update(rectPongX);
+    // update du tweening avec la position de la balle
     MyTween.update(myball->ax,myball->ay);
 }
 
@@ -35,15 +38,20 @@ void testApp::update()
 //--------------------------------------------------------------
 void testApp::draw()
 {
+    // dessin de la vidéo, et du "how to play"
     ofSetColor(255,255,255);
     videoTexture.draw(0,0,camWidth,camHeight);
     fondTexture.draw(camWidth,0,300,360);
+    // analyse (oeil gauche, oeil droite, et dessin des rectangles autour des yeux).
     analyseAndDrawBlob();
+    // dessin des raquettes
     drawRect();
 
+    // dessin de la boule, et du tween.
     myball->draw();
     MyTween.draw();
 
+    // vérification de la position de la balle, si celle ci sort = recréation
     if((myball->ay > camHeight+10) || (myball->ay < 0) )
     {
         myball = new ofBall(camWidth/2,camHeight/2,camWidth,camHeight);
